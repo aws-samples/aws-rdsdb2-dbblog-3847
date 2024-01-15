@@ -1,11 +1,6 @@
-## My Project
+## Replay Db2 LUW workload in Workload in RDS for Db2
 
-TODO: Fill this README out!
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+The python will convert db2 event monitor into SQL and paremater files that can used by db2batch
 
 ## Security
 
