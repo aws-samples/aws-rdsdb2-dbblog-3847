@@ -15,7 +15,7 @@ The key processing steps are as follows:
 •	Imports necessary modules: datetime for handling time and os for file operations.
 •	Clears the screen and records the script's start time.
 •	Defines variables for processing.
-•	Opens an output file named ./sql-with-key.txt to temporarily store processed SQL statements with pseudo keys. This is needed as some of the SQL statements span multiple lines in the input file and do not have a key.
+•	Opens an output file named ./sql-with-key.txt to temporarily store processed SQL statements with pseudo keys. This is needed as some of the SQL statements span multiple lines in the input file and do not have a key.\
 •	Reads the raw SQL data file line by line
  o	Splits each line into components based on delimiters.
  o	Handles different record types (single-line SQLs, multi-line SQLs, and parts of multi-line SQLs).
