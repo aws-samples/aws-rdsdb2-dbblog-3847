@@ -23,28 +23,31 @@ The key processing steps are as follows:
 
 •	Reads the raw SQL data file line by line
 
-   o	Splits each line into components based on delimiters.
+   	o	Splits each line into components based on delimiters.
  
-   o	Handles different record types (single-line SQLs, multi-line SQLs, and parts of multi-line SQLs).
+   	o	Handles different record types (single-line SQLs, multi-line SQLs, and parts of multi-line SQLs).
  
-   o	Generates a pseudo key for each SQL statement using activity ID, unit of work ID, timestamp, and SQL text for multi-line SQL statements
+   	o	Generates a pseudo key for each SQL statement using activity ID, unit of work ID, timestamp, and SQL text for multi-line SQL statements
  
-   o	Writes the processed SQL statements, parameters, and pseudo keys to the ./sql-with-key.txt file.
+   	o	Writes the processed SQL statements, parameters, and pseudo keys to the ./sql-with-key.txt file.
  
-   o	Closes the file.
+   	o	Closes the file.
  
 •	Opens two output files: ./sql-statement.txt and ./sql-parms.txt.
 
 •	Reads the ./sql-with-key.txt file line by line:
 
-   o	Separates SQL statements, parameters, and pseudo keys.
+   	o	Separates SQL statements, parameters, and pseudo keys.
  
-   o	Groups parameters based on pseudo keys.
+   	o	Groups parameters based on pseudo keys.
  
-   o	Writes SQL statements to ./sql-statement.txt.
+   	o	Writes SQL statements to ./sql-statement.txt.
  
-   o	Writes parameters to ./sql-parms.txt, enclosing character-type values in single quotes.
+   	o	Writes parameters to ./sql-parms.txt, enclosing character-type values in single quotes.
+   
 •	Closes the output files.
+
 •	Records the script's end time and calculates execution time.
+
 •	Prints summary information, including the number of processed SQL statements and execution time.
 
